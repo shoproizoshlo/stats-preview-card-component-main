@@ -1,0 +1,100 @@
+/* 
+## Colors
+
+### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+:root {
+  --neutral-white: hsl(0, 0%, 100%);
+}
+body {
+  background-color: hsl(233, 47%, 7%);
+}
+.container {
+  display: flex;
+  max-width: 700px;
+  margin: 10% auto;
+  background-color: hsl(244, 38%, 16%);
+}
+.text-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 30px;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+.heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--neutral-white);
+}
+.accent {
+  color: hsl(277, 64%, 61%);
+}
+.text {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.stats {
+  display: flex;
+  justify-content: space-around;
+}
+.stats-item {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+.stats-item-num {
+  color: var(--neutral-white);
+  font-weight: 700;
+}
+.image-container {
+  flex: 1;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-container .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1; /* По умолчанию невидим */
+}
